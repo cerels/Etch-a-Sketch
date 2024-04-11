@@ -24,10 +24,18 @@ function makeGrid(gridSize) {
         square.classList.add("square");
         square.style.width = squareWidth;
         squareGrid.appendChild(square);
-
+        let brightness = 1;
         // add an event listener to change color when hovering
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = getRandomHexColor();
+
+            if (square.style.backgroundColor === '') {
+                square.style.backgroundColor = getRandomHexColor();
+
+            } else {
+                brightness = Math.max(brightness - 0.1, 0);
+                square.style.filter = `brightness(${brightness})`;
+            }
+
         });
     }
 }
