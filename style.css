@@ -1,23 +1,17 @@
 .flex-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%; 
     justify-content: center;
     align-items: center;
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
 }
 
 
 
 .square {
     display: flex;
-    align-items: center;
-    justify-content: center;
     aspect-ratio: 1 / 1;
-    background-color: aqua;
-    outline: 10px solid black;
+    outline: 2px solid black;
   }
-
-.square:hover {
-    background-color: yellowgreen;
-}
